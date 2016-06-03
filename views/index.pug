@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        title Scrappy
+        script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js')
+    body
+        h1 Scrappy
+        form(action="/add" method="POST")
+            input(placeholder="URL Address" name="url" type="text")
+            select(name="category")
+                option(value="News") News
+                option(value="Realtor") Realtor
+                option(value="Tech") Tech
+            input(type="submit" value="Add")
+        form(action="/search" method="POST")
+            input(placeholder="Search" name="query" type="text")
+            input(type="submit" value="Search")
+        if (documents.length)
+            each document in documents
+                ul
+                    li
+                        p.url
+                            a(href='/document/' + document._id target="_blank")=document.url
+                        p=document.category
+                        if document.created
+                            p.created
+                                span=document.created
+        else
+            p No Data Found in your Database
