@@ -1,0 +1,22 @@
+{
+  "name": "scrappy",
+  "version": "1.0.0",
+  "description": "A scrapper contains auto-fetch and search features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scrapper",
+    "search",
+    "auto-fetch"
+  ],
+  "author": "Yan Hong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongodb": "^2.1.21",
+    "monk": "^1.0.1",
+    "request": "^2.72.0"
+  }
+}
